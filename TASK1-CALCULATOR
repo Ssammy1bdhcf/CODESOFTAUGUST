@@ -1,4 +1,5 @@
 import math
+
 def addition(x, y):
     return x + y
 
@@ -24,10 +25,14 @@ def inverse (x):
     return 1/x
 def log(x):
     return math.log(x)
+
+
 print("Select operation:")
 print("1.Basic Arihtematics:")
 print("2.other:")
+
 choice=input("enter  your choice(1/2): ")
+
 if choice=='1':
     print("1. Addition")
     print("2. Subtraction")
@@ -46,6 +51,8 @@ if choice=='1':
         print(num1, "/", num2, "=", division (num1, num2))
     else:
         print("Invalid input")
+
+
 elif choice =='2':
     print("1. sin")
     print("2. cos")
@@ -55,6 +62,7 @@ elif choice =='2':
     print("6. log")
     choice = input("Enter choice (1/2/3/4/5/6): ")
     num1 = float(input("Enter  number: "))
+
     if choice =='1':
         print("The value of sin(",num1,") is : ",sin(num1))
         print("The value of sin(",-num1,") is: ",sin(-num1))
@@ -72,5 +80,7 @@ elif choice =='2':
         print("the logarithamic value of(",num1,") is:",log(num1))
     else:
         print("Invalid input")
+
+
 else:
     print("Invalid input")
