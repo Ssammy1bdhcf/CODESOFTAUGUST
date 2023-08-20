@@ -1,17 +1,16 @@
 import math
-
-def add(x, y):
+def addition(x, y):
     return x + y
 
-def subtract(x, y):
+def subtraction(x, y):
     return x - y
 
-def multiply(x, y):
+def multiplication(x, y):
     return x * y
 
-def divide(x, y):
+def division (x, y):
     if y == 0:
-        raise ValueError("Cannot divide by zero")
+        raise ValueError("Cannot divide by zero so it is error")
     return x / y
 def sin(x):
      return math.sin(x)
@@ -25,47 +24,38 @@ def inverse (x):
     return 1/x
 def log(x):
     return math.log(x)
-
 print("Select operation:")
 print("1.Basic Arihtematics:")
 print("2.other:")
-
-choice=input("enter choice(1/2): ")
-
+choice=input("enter  your choice(1/2): ")
 if choice=='1':
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
-    choice ==input("Enter choice (1/2/3/4): ")
-
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("enter the second number: ")) 
-
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    choice = input("Enter your choice (1/2/3/4): ")
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter second number: "))
     if choice == '1':
-        print(num1, "+", num2, "=", add(num1, num2))
+        print(num1, "+", num2, "=", addition(num1, num2))
     elif choice == '2':
-        print(num1, "-", num2, "=", subtract(num1, num2))
+        print(num1, "-", num2, "=", subtraction(num1, num2))
     elif choice == '3':
-        print(num1, "*", num2, "=", multiply(num1, num2))
+        print(num1, "*", num2, "=", multiplication (num1, num2))
     elif choice == '4':
-        print(num1, "/", num2, "=", divide(num1, num2))
+        print(num1, "/", num2, "=", division (num1, num2))
     else:
-        print("Invalid input")  
-
+        print("Invalid input")
 elif choice =='2':
-
     print("1. sin")
     print("2. cos")
     print("3. tan")
     print("4. numsquare ")
     print("5. inverse")
     print("6. log")
-
     choice = input("Enter choice (1/2/3/4/5/6): ")
     num1 = float(input("Enter  number: "))
     if choice =='1':
-
         print("The value of sin(",num1,") is : ",sin(num1))
         print("The value of sin(",-num1,") is: ",sin(-num1))
     elif choice =='2':
@@ -82,6 +72,5 @@ elif choice =='2':
         print("the logarithamic value of(",num1,") is:",log(num1))
     else:
         print("Invalid input")
-
 else:
-        print("Invalid input")
+    print("Invalid input")
